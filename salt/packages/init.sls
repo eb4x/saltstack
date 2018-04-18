@@ -1,10 +1,10 @@
 install multiple packages:
   pkg.installed:
-    - pkgs: {{
+    - pkgs: {{ (
         pillar['editors'] +
         pillar['browsers'] +
         [
           'lbzip2',
           'strace'
         ]
-      }}
+      ) | yaml }}
